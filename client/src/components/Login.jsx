@@ -11,9 +11,11 @@ const Login = () => {
         password: "",
     });
     const history = useNavigate();
+    
+    console.log(inpval);
 
     const setVal = (e) => {
-        // console.log(e.target.value);
+        console.log(e.target.value);
         const { name, value } = e.target;
 
         setInpval(() => {
@@ -46,7 +48,7 @@ const Login = () => {
                 position: "top-center"
             });
         } else {
-            // console.log("user login succesfully done");
+            console.log("user login succesfully done");
 
 
             // const data = await fetch("/login", {
@@ -94,7 +96,7 @@ const Login = () => {
                         </div>
 
                         <button className='btn' onClick={loginuser}>Login</button>
-                        <p>Don't have an Account? <NavLink to="/register">Sign Up</NavLink> </p>
+                        <p>Don't have an Account? <NavLink to="/signup">Sign Up</NavLink> </p>
                     </form>
 
                 </div>
